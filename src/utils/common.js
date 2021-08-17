@@ -1,6 +1,9 @@
 export const getNumberComma = (value) => {
   const regex = /[^0-9,]/g;
-  return value.replace(regex, "");
+  const regex2 = /^[^0-9]+/g;
+  const regex3 = /,{2,}/g;
+
+  return value.replace(regex, "").replace(regex2, "").replace(regex3, ",");
 };
 
 export const selectionSort = (nums) => {
